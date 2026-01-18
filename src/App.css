@@ -1,0 +1,11 @@
+
+@import "tailwindcss";
+.icon {
+  @apply cursor-pointer text-xl hover:text-amber-300 hover:scale-110 transition duration-300;
+}
+.list-ll{
+  height: 70vh;
+}
+
+
+
