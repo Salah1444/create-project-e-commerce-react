@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchData = createAsyncThunk("store/fetchData", async () => {
   const response = await fetch("https://dummyjson.com/products");
   const data = await response.json();
-
   return data.products;
 });
 const StoreSlice = createSlice({
@@ -91,7 +90,7 @@ const StoreSlice = createSlice({
   },
   extraReducers: (build) => {
     build
-      .addCase(fetchData.pending, (state, action) => {
+      .addCase(fetchData.pending, (state) => {
         state.loading = true;
       })
       .addCase(fetchData.fulfilled, (state, action) => {

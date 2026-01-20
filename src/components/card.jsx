@@ -23,6 +23,7 @@ function Card({ item }) {
           src={item.images?.[0]}
           alt={item.title}
           className="aspect-square w-full rounded-lg bg-gray-200 object-cover xl:aspect-7/8"
+          loading="lazy"
         />
       </div>
 
