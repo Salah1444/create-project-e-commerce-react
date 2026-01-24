@@ -18,7 +18,6 @@ function Card({ item }) {
           className={`absolute right-2 top-2 cursor-pointer transition-colors
             ${isFavorit ? "text-red-500" : "text-amber-50 hover:text-red-500"}`}
         />
-
         <img
           src={item.images?.[0]}
           alt={item.title}
