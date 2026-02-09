@@ -274,7 +274,8 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit" 
-            className="block w-full rounded-md cursor-pointer bg-amber-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 transition-colors"
+            disabled={Object.keys(errors).length >0}
+            className={`block w-full  rounded-md cursor-pointer disabled:cursor-not-allowed disabled:bg-gray-700 bg-amber-600   px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600 transition-colors`}
           >
             Send
           </button>

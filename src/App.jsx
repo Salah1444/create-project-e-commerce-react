@@ -28,7 +28,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/About" element={<About/>} />
-      <Route path="/Shop" element={<Shop   />} />
+      <Route path="/Shop" element={<Shop />} />
       <Route path="/Contact" element={<Contact/>} />
     </Routes>
     {isVisible ? <DropCart/> : null}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './card'
+import Card from './Card';
 import { useSelector } from 'react-redux';
 function Directory({}) {
   const products = useSelector(st => st.store.produits);

@@ -19,8 +19,12 @@ const StoreSlice = createSlice({
     quantite: 0,
     total: 0,
     itemDetail: {},
+    active:'Home',
   },
   reducers: {
+    ActivateLink : (state,action)=>{
+      state.active = action.payload
+    },
     AddToCart: (state, action) => {
       const itemd = state.cart.find((it) => it.id === action.payload.id);
       if (!itemd) {
@@ -79,6 +83,9 @@ const StoreSlice = createSlice({
       state.itemDetail = action.payload;
     },
     FilterProducts: (state, action) => {
+      if(state.active !=='Shop'){
+        state.active ='Shop';
+      }
       if (action.payload !== "All") {
         state.produits = state.allProducts.filter(
           (item) => item.category == action.payload,
@@ -107,6 +114,7 @@ const StoreSlice = createSlice({
 
 export default StoreSlice.reducer;
 export const {
+  ActivateLink,
   AddToCart,
   ToggleCart,
   ToggleFavorit,

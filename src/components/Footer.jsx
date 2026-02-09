@@ -2,8 +2,12 @@ import React from "react";
 import logo from "./../assets/react.svg";
 import { FaFacebook, FaGithub, FaWhatsapp, FaEnvelope, FaPhone } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { ActivateLink } from "../redux/storeSlice";
 
 function Footer() {
+  const active = useSelector(st => st.store.active);
+  const dispatch = useDispatch();
   return (
     <footer className="bg-amber-950 text-white px-6 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -35,9 +39,9 @@ function Footer() {
             {["Home", "About", "Shop", "Contact"].map((item) => (
               <li
                 key={item}
-                className="cursor-pointer hover:text-amber-300 transition"
+                className={`cursor-pointer hover:text-amber-300 hover:translate-x-1 ${active == item ? 'text-amber-300':''} transition`}
               >
-                <Link to={`${item}`}>{item}</Link>
+                <Link to={`${item}`} onClick={()=>dispatch(ActivateLink({item}))}>{item}</Link>
               </li>
             ))}
           </ul>
