@@ -1,11 +1,33 @@
 
+
+.list-ll{
+  height: 70vh;
+}
+.about_us_img{
+  max-height: 20rem;
+  max-width: 20rem;
+}
+.about_us_img:hover{
+  transform:rotate(20deg);
+}
+
+.about_us_title::after{
+  position:absolute;
+  content:'';
+  left:0;
+  width: 0;
+  height: 5px;
+  border-radius: 70px;
+  bottom:10px;
+  transition: width 0.3s ease;
+  @apply bg-amber-500;
+}
+.about_us_title:hover::after {
+  width: 10rem;
+}
+
 @import "tailwindcss";
 .icon {
   @apply cursor-pointer text-xl hover:text-amber-300 hover:scale-110 transition duration-300;
 }
-.list-ll{
-  height: 70vh;
-}
-
-
 

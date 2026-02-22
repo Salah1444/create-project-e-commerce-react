@@ -87,11 +87,7 @@ function Home() {
           Hand-picked products chosen by our customers
         </p>
 
-        <div className="
-          grid grid-cols-1 gap-8 px-6
-          sm:grid-cols-2
-          lg:grid-cols-3
-          xl:grid-cols-4
+        <div className="flex justify-center gap-10 mx-10 flex-col md:flex-row
         ">
           {featuredProducts.map((item) => (
             <Card key={item.id} item={item} />

@@ -9,7 +9,7 @@ function Footer() {
   const active = useSelector(st => st.store.active);
   const dispatch = useDispatch();
   return (
-    <footer className="bg-amber-950 text-white px-6 py-10">
+    <footer className="bg-amber-950 text-white mt-10 px-6 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="space-y-4">
           <div className="flex items-center gap-3">
