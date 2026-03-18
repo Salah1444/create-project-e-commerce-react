@@ -1,7 +1,7 @@
 
 import logo from "./../assets/react.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { ActivateLink, ToggleCart,ToggleFavorit } from "../redux/storeSlice";
+import { ActivateLink, ToggleCart,ToggleFavorit } from "../store/storeSlice";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";

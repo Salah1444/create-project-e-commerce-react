@@ -1,6 +1,6 @@
-import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import { AddToCart, ToggleDetail } from "../redux/storeSlice";
+import { AddToCart, ToggleDetail } from "../store/storeSlice";
 import {FaArrowLeftLong} from "react-icons/fa6";
 function Details() {
   const dispatch = useDispatch();

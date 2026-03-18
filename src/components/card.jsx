@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AddToCart, ToggleDetail, AddToFavorit } from "../redux/storeSlice";
+import { AddToCart, ToggleDetail, AddToFavorit } from "../store/storeSlice";
 import { FaHeart } from "react-icons/fa";
 
 function Card({ item }) {
@@ -42,6 +42,7 @@ function Card({ item }) {
       >
         Learn more ...
       </button>
+      
     </div>
   );
 }

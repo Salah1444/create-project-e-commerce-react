@@ -3,13 +3,11 @@ import Slide from "../components/Slide";
 import all from "../assets/All_Products.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { ActivateLink, FilterProducts } from "../redux/storeSlice";
+import { ActivateLink, FilterProducts } from "../store/storeSlice";
 import Card from "../components/Card";
 import { FaCartShopping } from "react-icons/fa6";
 
-/* =======================
-   Categories Data
-======================= */
+
 const categories = [
   { name: "All", img: all },
   {

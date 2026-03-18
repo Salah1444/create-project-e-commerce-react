@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AddToCart, ToggleFavorit,DeletElementFromFarovit} from "../redux/storeSlice";
+import { AddToCart, ToggleFavorit,DeletElementFromFarovit} from "../store/storeSlice";
 import { FaTrashCan, FaX } from "react-icons/fa6";
 
 function DropFavorit() {

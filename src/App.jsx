@@ -10,27 +10,31 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
-import { fetchData } from "./redux/storeSlice";
+import { fetchData } from "./store/storeSlice";
 import DropFavorit from "./components/DropFavorit";
+import ValidateOrder from "./components/ValidateOrder";
 function App() {
   const dispatch = useDispatch();
   const isVisibl = useSelector(state => state.store.DetailisVisible);
   const isVisible = useSelector((state) => state.store.isVisible);
   const favoritState =  useSelector((state) => state.store.DropFavoritState);
-  
+
   useEffect(() => {
     dispatch(fetchData());
-  }, [dispatch]);
-  
+  }, []);
+
   return (
     <>
     <Navbar />
+    <main className="min-w-screen">
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/About" element={<About/>} />
       <Route path="/Shop" element={<Shop />} />
       <Route path="/Contact" element={<Contact/>} />
+      <Route path="/order" element={<ValidateOrder/>} />
     </Routes>
+    </main>
     {isVisible ? <DropCart/> : null}
     {isVisibl ?<Details />: null}
     {favoritState ?<DropFavorit />: null}

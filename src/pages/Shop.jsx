@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import Directory from "../components/Directory";
 import all from "../assets/All_Products.png";
-import { FilterProducts } from "../redux/storeSlice";
+import { FilterProducts } from "../store/storeSlice";
 function Shop() {
   const loading = useSelector(st => st.store.loading);
   const category = [

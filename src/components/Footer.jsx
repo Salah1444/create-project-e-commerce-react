@@ -1,9 +1,9 @@
-import React from "react";
+
 import logo from "./../assets/react.svg";
 import { FaFacebook, FaGithub, FaWhatsapp, FaEnvelope, FaPhone } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { ActivateLink } from "../redux/storeSlice";
+import { ActivateLink } from "../store/storeSlice";
 
 function Footer() {
   const active = useSelector(st => st.store.active);
@@ -41,7 +41,7 @@ function Footer() {
                 key={item}
                 className={`cursor-pointer hover:text-amber-300 hover:translate-x-1 ${active == item ? 'text-amber-300':''} transition`}
               >
-                <Link to={`${item}`} onClick={()=>dispatch(ActivateLink({item}))}>{item}</Link>
+                <Link to={`${item !== 'Home' ? item : '/'}`} onClick={()=>dispatch(ActivateLink({item}))}>{item}</Link>
               </li>
             ))}
           </ul>
